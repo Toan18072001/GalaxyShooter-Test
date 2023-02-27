@@ -6,12 +6,14 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     //PathController pathController;
-    int curentIndexPath;
+    public float spaceEnemy;
     public bool isFirstMove = false, isSecondMove = true, isMoveDown=false,inCheckEndPoint=false;
+    //public Vector2 curentPosion;
+
     int coutFirstMove = 0;
     float endPointDown = -4.16f;
-    public Vector2 curentPosion;
     int index;
+    int curentIndexPath;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,12 +50,12 @@ public class Enemy : MonoBehaviour
             }else if(index>= 4 && index < 8)
             {
                 Debug.Log("enemy index2: " + index);
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, SpawManager.instance.startPosition.y - 1.7f), speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, SpawManager.instance.startPosition.y - spaceEnemy), speed * Time.deltaTime);
             }
             else
             {
                 Debug.Log("enemy index3: " + index);
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, SpawManager.instance.startPosition.y - 3.4f), speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, SpawManager.instance.startPosition.y - (spaceEnemy*2)), speed * Time.deltaTime);
             }
         }
     }
@@ -85,14 +87,14 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("SecondMovePos");
         Vector2 temp = transform.position;
-        if (temp != PathController.instance.startPosition)
+        if (temp != PathController.instance.startPositionRow)
         {
-            transform.position = Vector2.MoveTowards(transform.position, PathController.instance.startPosition, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, PathController.instance.startPositionRow, speed * Time.deltaTime);
         }
         else
         {
             isSecondMove = true;
-            PathController.instance.startPosition = new Vector2(PathController.instance.startPosition.x + 1.7f, PathController.instance.startPosition.y);
+            PathController.instance.startPositionRow = new Vector2(PathController.instance.startPositionRow.x + spaceEnemy, PathController.instance.startPositionRow.y);
         }
     }
 

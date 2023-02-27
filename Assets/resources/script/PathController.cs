@@ -6,7 +6,7 @@ public class PathController : MonoBehaviour
 {
     public static PathController instance;
     public List<GameObject> paths = new List<GameObject>();
-    public Vector2 startPosition = new Vector2(-2.55f, 4.37f);
+    public Vector2 startPositionRow = new Vector2(-2f, 4.37f);
     public bool isMoveDown;
     public List<Vector2> posEnmenys= new List<Vector2>();
     private void Awake()

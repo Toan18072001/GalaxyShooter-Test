@@ -30,6 +30,7 @@ public class EnemyManager : MonoBehaviour
     public IEnumerator CountDownStartEnemyMoveDown()
     {
         yield return new WaitForSeconds(3f);
+        GameManager.Instance.ischeckThreeBullet= true;
        StartCoroutine(RandomeMoveDownEnemy());
     }
 

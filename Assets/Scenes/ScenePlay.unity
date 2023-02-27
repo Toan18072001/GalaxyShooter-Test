@@ -362,7 +362,7 @@ MonoBehaviour:
   - {fileID: 1695104307}
   - {fileID: 1539266425}
   - {fileID: 505922273}
-  startPosition: {x: -2.55, y: 4.37}
+  startPositionRow: {x: -2.25, y: 4.37}
   isMoveDown: 0
   posEnmenys: []
 --- !u!4 &641573454
@@ -447,8 +447,8 @@ MonoBehaviour:
   coutEnemy: 12
   enemyPrefab: {fileID: 4572151069603087893, guid: 40260ffdff06d7d459c8ec0777302a15, type: 3}
   ParentEnemy: {fileID: 1782585992}
-  startPosition: {x: -2.55, y: 4.37}
-  spaceColum: 1.7
+  startPosition: {x: -2.25, y: 4.37}
+  spaceColum: 1.5
 --- !u!4 &1019594761
 Transform:
   m_ObjectHideFlags: 0
@@ -491,14 +491,14 @@ RectTransform:
   m_GameObject: {fileID: 1252312045}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 2.91307, y: 2.62213, z: 2.62213}
   m_Children: []
   m_Father: {fileID: 1607859784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 446}
+  m_AnchoredPosition: {x: 0, y: 1860}
   m_SizeDelta: {x: 668, y: 418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252312047
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c70256eff9b0a24cbd8f79530b10f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 100
 --- !u!1 &1539266425
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ischeckWin: 0
+  ischeckThreeBullet: 0
 --- !u!4 &1546296714
 Transform:
   m_ObjectHideFlags: 0
@@ -660,10 +661,10 @@ RectTransform:
   m_Father: {fileID: 1927749648}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 668, y: 418}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1607859785
 BoxCollider2D:
@@ -813,14 +814,14 @@ RectTransform:
   m_GameObject: {fileID: 1848119264}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 2.91307, y: 2.61849, z: 2.61849}
   m_Children: []
   m_Father: {fileID: 1607859784}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -17}
+  m_AnchoredPosition: {x: 4.22e-13, y: -17}
   m_SizeDelta: {x: 668, y: 418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848119266
@@ -873,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c70256eff9b0a24cbd8f79530b10f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 100
 --- !u!1 &1868538785
 GameObject:
   m_ObjectHideFlags: 0

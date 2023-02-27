@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Background : MonoBehaviour
 {
-    const int pointStartBg = 446;
-    const int pointEndBg = -440;
+    const int pointStartBg = 1860;
+    const int pointEndBg = -1913;
     [SerializeField] float speed;
     RectTransform rect;
     Vector2 anchoredPosition = new Vector2();

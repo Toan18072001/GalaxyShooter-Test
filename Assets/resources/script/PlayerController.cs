@@ -15,12 +15,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Bắn đạn theo 3 hướng khác nhau
-            Shoot(firePoints[0].position, firePoints[0].up);
-            Vector2 f1 = (firePoints[1].up + firePoints[2].right) / 2;
-            Shoot(firePoints[1].position, f1);
-            Vector2 f2 = (firePoints[2].up - firePoints[2].right) / 2;
-            Shoot(firePoints[2].position, f2);
+            if (GameManager.Instance.ischeckThreeBullet)
+            {
+                shotThreeBullet();
+            }
+            else
+            {
+                shotBullet();
+            }
         }
         if (Input.GetMouseButton(0))
         {
@@ -56,5 +58,18 @@ public class PlayerController : MonoBehaviour
 
         // Đặt hướng đi của viên đạn
         bullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * bulletSpeed;
+    }
+
+    private void shotThreeBullet()
+    {
+        Shoot(firePoints[0].position, firePoints[0].up);
+        Vector2 f1 = (firePoints[1].up + firePoints[2].right) / 2;
+        Shoot(firePoints[1].position, f1);
+        Vector2 f2 = (firePoints[2].up - firePoints[2].right) / 2;
+        Shoot(firePoints[2].position, f2);
+    }
+    private void shotBullet()
+    {
+        Shoot(firePoints[0].position, firePoints[0].up);
     }
 }

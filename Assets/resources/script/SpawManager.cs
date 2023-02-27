@@ -11,8 +11,8 @@ public class SpawManager : MonoBehaviour
     [SerializeField]
     private GameObject enemyPrefab;
     public GameObject ParentEnemy;
-    public Vector2 startPosition = new Vector2 (-2.55f, 4.37f);
-    public float spaceColum = 1.7f;
+    public Vector2 startPosition;
+    public float spaceColum = 1.25f;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +35,7 @@ public class SpawManager : MonoBehaviour
     {
         if (curentEnemy >= coutEnemy)
         {
-            GameManager.Instance.ischeckWin= true;
+            GameManager.Instance.ischeckWin = true;
             StartCoroutine(EnemyManager.instance.CountDownStartEnemyMoveDown());
             yield return null;
         }
@@ -47,7 +47,7 @@ public class SpawManager : MonoBehaviour
             enemy.tag = "Enemy";
             if (curentEnemy == 7 || curentEnemy == 11)
             {
-                PathController.instance.startPosition = new Vector2(-2.55f, PathController.instance.startPosition.y - spaceColum);
+                PathController.instance.startPositionRow = new Vector2(startPosition.x, PathController.instance.startPositionRow.y - spaceColum);
             }
             curentEnemy++;
             StartCoroutine(SpawnEnemies());
