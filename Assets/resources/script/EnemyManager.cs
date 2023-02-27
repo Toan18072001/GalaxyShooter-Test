@@ -37,6 +37,7 @@ public class EnemyManager : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(1.5f, 4));
         int rand = Random.Range(0, 12);
+        GameManager.Instance.CheckWin();
         transform.GetChild(rand).GetComponent<Enemy>().isMoveDown= true;
         transform.GetChild(rand).GetComponent<Enemy>().setIndexEnemy(rand);
         Debug.Log("Index: " + rand);

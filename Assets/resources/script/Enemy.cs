@@ -101,4 +101,12 @@ public class Enemy : MonoBehaviour
     {
         index= _index;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.Gamelose();
+        }
+    }
 }

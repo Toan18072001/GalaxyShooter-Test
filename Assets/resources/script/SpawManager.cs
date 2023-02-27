@@ -35,6 +35,7 @@ public class SpawManager : MonoBehaviour
     {
         if (curentEnemy >= coutEnemy)
         {
+            GameManager.Instance.ischeckWin= true;
             StartCoroutine(EnemyManager.instance.CountDownStartEnemyMoveDown());
             yield return null;
         }
@@ -43,6 +44,7 @@ public class SpawManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             GameObject enemy = Instantiate(enemyPrefab, PathController.instance.paths[0].transform.position, Quaternion.identity);
             enemy.transform.parent = ParentEnemy.transform;
+            enemy.tag = "Enemy";
             if (curentEnemy == 7 || curentEnemy == 11)
             {
                 PathController.instance.startPosition = new Vector2(-2.55f, PathController.instance.startPosition.y - spaceColum);

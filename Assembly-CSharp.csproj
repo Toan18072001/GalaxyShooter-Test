@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{896FDD23-7DD9-40FE-A341-BF79FBF0D921}</ProjectGuid>
+    <ProjectGuid>{1EF1EE9A-2F6B-5BF2-04B6-1D21F4BBCC92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,14 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\resources\script\Background.cs" />
-    <Compile Include="Assets\resources\script\PathController.cs" />
-    <Compile Include="Assets\resources\script\Enemy.cs" />
-    <Compile Include="Assets\resources\script\SpawManager.cs" />
-    <Compile Include="Assets\resources\script\EnemyManager.cs" />
-    <Compile Include="Assets\resources\script\Bullet.cs" />
-    <Compile Include="Assets\resources\script\PlayerController.cs" />
     <Compile Include="Assets\resources\script\EvenManager.cs" />
+    <Compile Include="Assets\resources\script\Bullet.cs" />
+    <Compile Include="Assets\resources\script\Background.cs" />
+    <Compile Include="Assets\resources\script\Enemy.cs" />
+    <Compile Include="Assets\resources\script\EnemyManager.cs" />
+    <Compile Include="Assets\resources\script\PlayerController.cs" />
+    <Compile Include="Assets\resources\script\SpawManager.cs" />
+    <Compile Include="Assets\resources\script\PathController.cs" />
+    <Compile Include="Assets\resources\script\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

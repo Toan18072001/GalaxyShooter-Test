@@ -20,9 +20,14 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Zone"))
+        if (collision.gameObject.CompareTag("Zone")|| collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log(collision.gameObject);
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
